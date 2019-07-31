@@ -14,7 +14,8 @@ void setup() {
   delay(10);
   Serial.println('\n');
   SPIFFS.begin();
-
+  WiFi.mode(WIFI_AP_STA);
+  
   WiFi.softAPConfig(ip, gateway, subnet);
   WiFi.softAP(ssid, password);             // Start the access point
   
